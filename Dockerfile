@@ -1,5 +1,6 @@
-FROM python:2.7
+FROM quay.io/trueaccord/miniubuntu:latest
 
+RUN installpkg python2.7 git
 RUN pip install awscli
 
 RUN git clone https://github.com/colinbjohnson/aws-missing-tools.git /opt/aws-missing-tools
